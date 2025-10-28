@@ -6,5 +6,19 @@
   "scan": "Scanner",
   "chat": "Discussion",
   "language": "Langue",
-  "environmentReady": "✅ Environnement Prêt"
+  "settings": "Paramètres",
+  "environmentReady": "✅ Environnement Prêt",
+  "scanTitle": "Scanner la facture",
+  "scanUploadGallery": "Télécharger depuis la galerie",
+  "scanCameraPermissionDenied": "L'accès à la caméra est requis pour scanner les factures.",
+  "scanOpenSettings": "Ouvrir les paramètres",
+  "scanPreviewTitle": "Vérifier le scan",
+  "scanRetake": "Reprendre",
+  "scanUseThis": "Utiliser ceci",
+  "scanFlash": "Flash",
+  "scanCapture": "Capturer",
+  "scanDeviceRequired": "La numérisation de documents nécessite un appareil physique.",
+  "scanProcessing": "Traitement du document...",
+  "scanFailed": "Échec du scan",
+  "scanFailedMessage": "Impossible de scanner le document. Veuillez réessayer."
 }

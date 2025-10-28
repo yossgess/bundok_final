@@ -24,8 +24,64 @@
   "@language": {
     "description": "Language selection label"
   },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Settings screen title"
+  },
   "environmentReady": "✅ Environment Ready",
   "@environmentReady": {
     "description": "Confirmation message that environment is configured"
+  },
+  "scanTitle": "Scan Invoice",
+  "@scanTitle": {
+    "description": "Scan document screen title"
+  },
+  "scanUploadGallery": "Upload from Gallery",
+  "@scanUploadGallery": {
+    "description": "Button to upload image from gallery"
+  },
+  "scanCameraPermissionDenied": "Camera access is required to scan invoices.",
+  "@scanCameraPermissionDenied": {
+    "description": "Error message when camera permission is denied"
+  },
+  "scanOpenSettings": "Open Settings",
+  "@scanOpenSettings": {
+    "description": "Button to open app settings"
+  },
+  "scanPreviewTitle": "Review Scan",
+  "@scanPreviewTitle": {
+    "description": "Preview screen title"
+  },
+  "scanRetake": "Retake",
+  "@scanRetake": {
+    "description": "Button to retake scan"
+  },
+  "scanUseThis": "Use This",
+  "@scanUseThis": {
+    "description": "Button to confirm and use scanned image"
+  },
+  "scanFlash": "Flash",
+  "@scanFlash": {
+    "description": "Flash toggle button tooltip"
+  },
+  "scanCapture": "Capture",
+  "@scanCapture": {
+    "description": "Capture button tooltip"
+  },
+  "scanDeviceRequired": "Document scanning requires a physical device.",
+  "@scanDeviceRequired": {
+    "description": "Message shown when running on simulator"
+  },
+  "scanProcessing": "Processing document...",
+  "@scanProcessing": {
+    "description": "Loading message during scan processing"
+  },
+  "scanFailed": "Scan Failed",
+  "@scanFailed": {
+    "description": "Error title when scan fails"
+  },
+  "scanFailedMessage": "Unable to scan document. Please try again.",
+  "@scanFailedMessage": {
+    "description": "Error message when scan fails"
   }
 }

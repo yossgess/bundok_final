@@ -6,5 +6,19 @@
   "scan": "مسح",
   "chat": "محادثة",
   "language": "اللغة",
-  "environmentReady": "✅ البيئة جاهزة"
+  "settings": "الإعدادات",
+  "environmentReady": "✅ البيئة جاهزة",
+  "scanTitle": "مسح الفاتورة",
+  "scanUploadGallery": "تحميل من المعرض",
+  "scanCameraPermissionDenied": "الوصول إلى الكاميرا مطلوب لمسح الفواتير.",
+  "scanOpenSettings": "فتح الإعدادات",
+  "scanPreviewTitle": "مراجعة المسح",
+  "scanRetake": "إعادة المسح",
+  "scanUseThis": "استخدام هذا",
+  "scanFlash": "الفلاش",
+  "scanCapture": "التقاط",
+  "scanDeviceRequired": "يتطلب مسح المستندات جهازًا فعليًا.",
+  "scanProcessing": "معالجة المستند...",
+  "scanFailed": "فشل المسح",
+  "scanFailedMessage": "تعذر مسح المستند. يرجى المحاولة مرة أخرى."
 }
