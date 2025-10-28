@@ -1,0 +1,10 @@
+{
+  "@@locale": "ar",
+  "appName": "بوندوك",
+  "dashboard": "لوحة التحكم",
+  "invoices": "الفواتير",
+  "scan": "مسح",
+  "chat": "محادثة",
+  "language": "اللغة",
+  "environmentReady": "✅ البيئة جاهزة"
+}

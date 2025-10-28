@@ -1,0 +1,57 @@
+name: bundok_final
+description: "AI-powered invoice management app with OCR and RAG capabilities"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+  flutter: '>=3.24.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # Navigation
+  go_router: ^14.0.0
+  
+  # State management
+  riverpod: ^2.5.0
+  
+  # Internationalization
+  easy_localization: ^3.0.7
+  
+  # HTTP client
+  dio: ^5.7.0
+  
+  # Permissions
+  permission_handler: ^11.3.1
+  
+  # Camera & Image
+  camera: ^0.11.2+1
+  image_picker: ^1.1.2
+  image: ^4.2.0
+  
+  # Icons
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  generate: true
+  
+  assets:
+    - assets/images/
+  
+  # Uncomment if custom fonts are needed for Arabic
+  # fonts:
+  #   - family: Cairo
+  #     fonts:
+  #       - asset: assets/fonts/Cairo-Regular.ttf
+  #       - asset: assets/fonts/Cairo-Bold.ttf
+  #         weight: 700

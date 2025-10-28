@@ -1,0 +1,31 @@
+{
+  "@@locale": "en",
+  "appName": "Bundok",
+  "@appName": {
+    "description": "Application name"
+  },
+  "dashboard": "Dashboard",
+  "@dashboard": {
+    "description": "Dashboard screen title"
+  },
+  "invoices": "Invoices",
+  "@invoices": {
+    "description": "Invoices screen title"
+  },
+  "scan": "Scan",
+  "@scan": {
+    "description": "Scan document screen title"
+  },
+  "chat": "Chat",
+  "@chat": {
+    "description": "Chat screen title"
+  },
+  "language": "Language",
+  "@language": {
+    "description": "Language selection label"
+  },
+  "environmentReady": "✅ Environment Ready",
+  "@environmentReady": {
+    "description": "Confirmation message that environment is configured"
+  }
+}
