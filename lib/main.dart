@@ -27,7 +27,6 @@ class BundokApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final locale = context.locale;
-    final isRTL = locale.languageCode == 'ar';
 
     return MaterialApp(
       title: 'Bundok',
@@ -44,16 +43,8 @@ class BundokApp extends StatelessWidget {
         AppLocalizations.delegate,
       ],
       
-      // RTL Support
-      builder: (context, child) {
-        if (isRTL) {
-          return Directionality(
-            textDirection: TextDirection.rtl,
-            child: child!,
-          );
-        }
-        return child!;
-      },
+      // RTL Support - handled automatically by MaterialApp
+      // The locale and Directionality are set automatically based on the locale
       
       home: const EnvironmentReadyScreen(),
     );
