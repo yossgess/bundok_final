@@ -83,5 +83,77 @@
   "scanFailedMessage": "Unable to scan document. Please try again.",
   "@scanFailedMessage": {
     "description": "Error message when scan fails"
+  },
+  "ocrProcessingTitle": "Processing Document",
+  "@ocrProcessingTitle": {
+    "description": "OCR processing screen title"
+  },
+  "ocrUploading": "Uploading image...",
+  "@ocrUploading": {
+    "description": "Status message during image upload"
+  },
+  "ocrWaitingWorker": "Waiting for worker...",
+  "@ocrWaitingWorker": {
+    "description": "Status message while waiting for desktop worker"
+  },
+  "ocrProcessingDocument": "Processing with OCR...",
+  "@ocrProcessingDocument": {
+    "description": "Status message during OCR processing"
+  },
+  "ocrInitializing": "Initializing...",
+  "@ocrInitializing": {
+    "description": "Initial status message"
+  },
+  "ocrJobId": "Job ID",
+  "@ocrJobId": {
+    "description": "Label for job ID"
+  },
+  "ocrStatus": "Status",
+  "@ocrStatus": {
+    "description": "Label for job status"
+  },
+  "ocrImageName": "Image",
+  "@ocrImageName": {
+    "description": "Label for image name"
+  },
+  "ocrWorkerInfo": "Your desktop worker will process this document automatically",
+  "@ocrWorkerInfo": {
+    "description": "Information about desktop worker"
+  },
+  "ocrSuccess": "OCR Completed Successfully!",
+  "@ocrSuccess": {
+    "description": "Success message when OCR completes"
+  },
+  "ocrFailed": "OCR Failed",
+  "@ocrFailed": {
+    "description": "Error title when OCR fails"
+  },
+  "ocrFailedMessage": "Failed to process document. Please try again.",
+  "@ocrFailedMessage": {
+    "description": "Error message when OCR fails"
+  },
+  "ocrUploadFailed": "Upload Failed",
+  "@ocrUploadFailed": {
+    "description": "Error title when upload fails"
+  },
+  "ocrRetry": "Retry",
+  "@ocrRetry": {
+    "description": "Retry button label"
+  },
+  "ocrStatusPending": "Pending",
+  "@ocrStatusPending": {
+    "description": "Pending status label"
+  },
+  "ocrStatusProcessing": "Processing",
+  "@ocrStatusProcessing": {
+    "description": "Processing status label"
+  },
+  "ocrStatusCompleted": "Completed",
+  "@ocrStatusCompleted": {
+    "description": "Completed status label"
+  },
+  "ocrStatusFailed": "Failed",
+  "@ocrStatusFailed": {
+    "description": "Failed status label"
   }
 }

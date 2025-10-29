@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter_doc_scanner/flutter_doc_scanner.dart';
+import 'package:cunning_document_scanner/cunning_document_scanner.dart';
 import '../core/constants/app_colors.dart';
 import '../core/l10n/app_localizations.dart';
 import '../features/dashboard/dashboard_screen.dart';
@@ -83,20 +83,36 @@ class _AppShellState extends State<AppShell> {
     }
 
     try {
-      // Directly launch ML Kit document scanner
-      final docScanner = FlutterDocScanner();
-      final scannedImage = await docScanner.getScanDocuments();
+      debugPrint('[AppShell] 🚀 Launching document scanner...');
+      
+      // Use cunning_document_scanner which returns image paths directly
+      final scannedImages = await CunningDocumentScanner.getPictures(
+        noOfPages: 1, // Single page scan
+      );
 
-      if (scannedImage != null && mounted) {
+      debugPrint('[AppShell] Scanner returned: $scannedImages');
+      debugPrint('[AppShell] Type: ${scannedImages.runtimeType}');
+
+      if (scannedImages != null && scannedImages.isNotEmpty && mounted) {
+        // Get the first scanned image path
+        String imagePath = scannedImages.first;
+        debugPrint('[AppShell] ✅ Got image path: $imagePath');
+        
+        debugPrint('[AppShell] 📱 Navigating to preview screen...');
+        
         // Navigate to preview screen
         await Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) => ScanPreviewScreen(
-              capturedImage: File(scannedImage),
+              capturedImage: File(imagePath),
             ),
           ),
         );
+        
+        debugPrint('[AppShell] ✅ Returned from preview screen');
+      } else {
+        debugPrint('[AppShell] ❌ Scanner returned null or empty list');
       }
     } catch (e) {
       if (mounted) {

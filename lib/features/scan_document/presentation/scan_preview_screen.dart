@@ -1,8 +1,10 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import '../../../core/constants/app_colors.dart';
 import '../../../core/l10n/app_localizations.dart';
 import '../../../shared/widgets/widgets.dart';
+import 'ocr_processing_screen.dart';
 
 /// Post-capture document preview screen
 /// 
@@ -26,19 +28,63 @@ class ScanPreviewScreen extends StatelessWidget {
     Navigator.pop(context);
   }
 
-  /// Handle use/confirm action
-  void _handleUseImage(BuildContext context) {
-    // TODO: Navigate to InvoiceReviewScreen with image file
-    // For now, show a placeholder message
+  /// Handle use/confirm action - navigate to OCR processing
+  Future<void> _handleUseImage(BuildContext context) async {
+    // Show immediate feedback
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text('Image confirmed! Ready for OCR processing.'),
-        backgroundColor: AppColors.success,
+        content: Text('Starting OCR processing...'),
+        duration: Duration(seconds: 1),
       ),
     );
-    
-    // Pop back to previous screen (or navigate to review screen)
-    Navigator.pop(context);
+
+    try {
+      if (kDebugMode) {
+        debugPrint('[ScanPreview] 🚀 Button pressed - starting navigation');
+        debugPrint('[ScanPreview] Image path: ${capturedImage.path}');
+        debugPrint('[ScanPreview] Image exists: ${capturedImage.existsSync()}');
+      }
+
+      // Navigate to OCR processing screen
+      final imageName = capturedImage.path.split(Platform.pathSeparator).last;
+      
+      if (kDebugMode) {
+        debugPrint('[ScanPreview] Image name: $imageName');
+        debugPrint('[ScanPreview] About to push OcrProcessingScreen...');
+      }
+
+      await Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            if (kDebugMode) {
+              debugPrint('[ScanPreview] ✅ Building OcrProcessingScreen');
+            }
+            return OcrProcessingScreen(
+              imageFile: capturedImage,
+              imageName: imageName,
+            );
+          },
+        ),
+      );
+
+      if (kDebugMode) {
+        debugPrint('[ScanPreview] Navigation completed/returned');
+      }
+    } catch (e, stackTrace) {
+      if (kDebugMode) {
+        debugPrint('[ScanPreview] ❌ Navigation error: $e');
+        debugPrint('[ScanPreview] Stack trace: $stackTrace');
+      }
+
+      // Show error to user
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('Error: $e'),
+          backgroundColor: AppColors.error,
+        ),
+      );
+    }
   }
 
   @override
@@ -54,7 +100,7 @@ class ScanPreviewScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          // Image preview
+          // Image/PDF preview
           Expanded(
             child: Container(
               margin: const EdgeInsets.all(16),
